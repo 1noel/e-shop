@@ -1,0 +1,246 @@
+
+<head>
+
+    <title> E-Commerce </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<main class="flex bg-gray-50 min-h-screen">
+    <aside class="w-[17%] h-screen bg-white fixed top-0 left-0">
+        <div class="flex justify-center py-5">
+            <img src="images/logo.png" alt="" class="w-28 h-24">
+        </div>
+
+        <ul class="">
+            <li class="bg-blue-900 text-white pl-5 py-2 rounded-r-3xl border border-orange-500 ">
+                <a href="index.html" class="text-lg font-medium"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="hover:bg-blue-900 hover:text-white pl-5 py-2 rounded-r-3xl hover:border hover:border-orange-500">
+                <a href="" class="text-lg font-medium"><i class="fa-solid fa-list"></i> Categories</a>
+            </li>
+            <li class="hover:bg-blue-900 hover:text-white pl-5 py-2 rounded-r-3xl hover:border hover:border-orange-500">
+                <a href="" class="text-lg font-medium"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </li>
+            <li class="hover:bg-blue-900 hover:text-white pl-5 py-2 rounded-r-3xl hover:border hover:border-orange-500">
+                <a href="contact.html" class="text-lg font-medium"><i class="fa-solid fa-envelope"></i> Contact us</a>
+            </li>
+            <li class="hover:bg-blue-900 hover:text-white pl-5 py-2 rounded-r-3xl hover:border hover:border-orange-500">
+                <a href="" class="text-lg font-medium"><i class="fa-solid fa-heart"></i> Wishlist</a>
+            </li>
+        </ul>
+
+        <div class="absolute bottom-0 w-full">
+            <div class="flex flex-wrap pb-3 justify-center">
+                <a href="" class="text-lg px-3 font-medium block hover:text-blue-900"> <i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="" class="text-lg px-3 font-medium block hover:text-blue-900"> <i class="fa-solid fa-file-contract"></i> Policy</a>
+                <a href="" class="text-lg px-3 font-medium block hover:text-blue-900"> <i class="fa-solid fa-shield"></i> Help</a>     
+            </div>      
+
+           
+        </div>
+    </aside>
+    <!-- main content here -->
+     <section class="w-[83%] ml-[17%] ">
+        <!-- head -->
+        <header class=" py-2 flex justify-between items-center md:px-10 bg-white  shadow-sm">
+            <div class="flex justify-between items-center border border-orange-500 rounded-full overflow-hidden">
+                <button class=" px-3 py-2 rounded-l hover:text-blue-900 transition duration-300">
+                    <i class="fas fa-search text-xl"></i>
+                </button>
+                <input type="search" placeholder="Search products..." class="px-4 py-2 focus:outline-none w-56">
+                <button class=" px-4 py-2 rounded-r hover:text-blue-900 transition duration-300">
+                    <i class="fas fa-microphone-lines text-xl"></i>
+                </button>
+            </div>    
+            <div class="flex justify-between items-center space-x-5">
+                <button class="loginbtn bg-blue-900 text-white px-5 py-1 text-lg rounded-full flex justify-center gap-1 items-center"> 
+                    <i class="fa-solid fa-right-to-bracket"></i> Login</button>
+               
+                <button> <i class="fa fa-moon  text-2xl text-gray-600"></i> </button>
+
+                <button class="relative">
+                    <i class="fa fa-bell text-2xl text-gray-600"></i> 
+                   <div class="absolute -top-1 -right-2 bg-orange-500 text-white rounded-full w-4 h-4 flex justify-center items-center">
+                       <span class="text-sm font-medium">5</span>
+                   </div>
+               </button>
+
+                <button class="relative">
+                     <i class="fa-brands fa-shopify text-2xl text-gray-600"></i> 
+                    <div class="absolute -top-1 -right-2 bg-orange-500 text-white rounded-full w-4 h-4 flex justify-center items-center">
+                        <span class="text-sm font-medium">5</span>
+                    </div>
+                </button>
+            </div>
+         </header>
+
+
+
+
+          <!-- too much products -->
+       
+
+         <!-- products -->
+          <section class="my-8 mx-10">
+
+           <div class="flex justify-between gap-5">
+            <div class="w-[65%] ">
+                <div class="flex p-5 gap-5">
+                    <div class="w-[30%] p-5">
+                        <div class="flex-col items-center space-y-2">
+                            <img src="images/neck1.png" alt="" class="w-28 h-28 mx-auto cursor-pointer bg-white px-3 py-2 rounded-md shadow-sm " onclick="changeImage('images/neck1.png')">
+                            <img src="images/cl1.png" alt="" class="w-28 h-28 mx-auto cursor-pointer bg-white px-3 py-2 rounded-md shadow-sm " bg-white p-2 rounded-md shadow-sm onclick="changeImage('images/cl1.png')">
+                            <img src="images/dres2.png" alt="" class="w-28 h-28 mx-auto cursor-pointer bg-white px-3 py-2 rounded-md shadow-sm " onclick="changeImage('images/dres2.png')">
+                        </div>                  
+                    </div>
+                    <div class="w-[70%] p-5"> 
+                        <div class="flex justify-center bg-white p-2 rounded-md shadow-sm">
+                            <img id="mainImage" src="images/pia2.png" alt="" class="w-80 h-80">
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                function changeImage(src) {
+                    document.getElementById('mainImage').src = src;
+                }
+                </script>
+                
+
+
+
+            <div class="my-5">
+                <h1 class="mb-3 text-lg ">Related product you may like</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5"> 
+                <div class="shadow-sm bg-white rounded-lg hover:shadow-md hover:shadow-blue-900">
+                    <div class="flex justify-center">
+                        <img src="images/desk1.png" alt="" class="w-44 h-32">
+                    </div>
+                    <div class="px-5 py-3">
+                    <div class="flex items-center justify-between ">
+                        <h3 class="text-lg font-semibold ">Desktop CPU</h3>
+                        <button class="bg-gray-100 h-9 w-9 rounded-full flex justify-center items-center">
+                            <i class="fa fa-cart-plus text-xl "></i>
+                        </button>
+                    </div>
+                        <div class="flex items-center justify-between ">
+                          <div class="flex items-center gap-2">
+                            <span class="text-lg font-bold text-blue-900">$90</span>
+                            <span class="text-lg text-gray-500 line-through">$109</span>
+                          </div>
+                          <div class="flex items-center">
+                            <span class="text-orange-500">★★★★★</span>
+                            <span class="ml-1 text-sm text-gray-600">5.0</span>
+                          </div>
+                        </div>
+                     
+                      </div>
+                </div>
+            
+            
+                <div class="shadow-sm bg-white rounded-lg hover:shadow-md hover:shadow-blue-900">
+                    <div class="flex justify-center py-1">
+                        <img src="images/pc1.png" alt="" class="w-44 h-32">
+                    </div>
+                    <div class="px-5 py-3">
+                    <div class="flex items-center justify-between ">
+                        <h3 class="text-lg font-semibold ">Laptop HP Elite Book</h3>
+                        <button class="bg-gray-100 h-9 w-9 rounded-full flex justify-center items-center">
+                            <i class="fa fa-cart-plus text-xl "></i>
+                        </button>
+                    </div>
+                        <div class="flex items-center justify-between ">
+                          <div class="flex items-center gap-2">
+                            <span class="text-lg font-bold text-blue-900">$1000</span>
+                            <span class="text-lg text-gray-500 line-through">$1300</span>
+                          </div>
+                          <div class="flex items-center">
+                            <span class="text-orange-500">★★★★★</span>
+                            <span class="ml-1 text-sm text-gray-600">5.0</span>
+                          </div>
+                        </div>
+                     
+                      </div>
+                </div>
+            
+            
+                <div class="shadow-sm bg-white rounded-lg hover:shadow-md hover:shadow-blue-900">
+                    <div class="flex justify-center py-1">
+                        <img src="images/hd1.png" alt="" class="w-44 h-32">
+                    </div>
+                    <div class="px-5 py-3">
+                    <div class="flex items-center justify-between ">
+                        <h3 class="text-lg font-semibold ">Muscian Headset</h3>
+                        <button class="bg-gray-100 h-9 w-9 rounded-full flex justify-center items-center">
+                            <i class="fa fa-cart-plus text-xl "></i>
+                        </button>
+                    </div>
+                        <div class="flex items-center justify-between ">
+                          <div class="flex items-center gap-2">
+                            <span class="text-lg font-bold text-blue-900">$20</span>
+                            <span class="text-lg text-gray-500 line-through">$22</span>
+                          </div>
+                          <div class="flex items-center">
+                            <span class="text-orange-500">★★★★★</span>
+                            <span class="ml-1 text-sm text-gray-600">5.0</span>
+                          </div>
+                        </div>
+                     
+                      </div>
+                </div>
+            
+            
+                <div class="shadow-sm bg-white rounded-lg hover:shadow-md hover:shadow-blue-900">
+                    <div class="flex justify-center py-1">
+                        <img src="images/neck1.png" alt="" class="w-44 h-32">
+                    </div>
+                    <div class="px-5 py-3">
+                    <div class="flex items-center justify-between ">
+                        <h3 class="text-lg font-semibold ">Women Neckles</h3>
+                        <button class="bg-gray-100 h-9 w-9 rounded-full flex justify-center items-center">
+                            <i class="fa fa-cart-plus text-xl "></i>
+                        </button>
+                    </div>
+                        <div class="flex items-center justify-between ">
+                          <div class="flex items-center gap-2">
+                            <span class="text-lg font-bold text-blue-900">$180</span>
+                            <span class="text-lg text-gray-500 line-through">$220</span>
+                          </div>
+                          <div class="flex items-center">
+                            <span class="text-orange-500">★★★★★</span>
+                            <span class="ml-1 text-sm text-gray-600">5.0</span>
+                          </div>
+                        </div>
+                     
+                      </div>
+                </div>
+            
+            
+            </div>
+            </div>
+            </div>
+        
+
+            <div class="w-[35%]  p-5">
+                <p class="text-2xl font-bold text-blue-900">Rain Jacket</p>
+                    Welcome to our jewelry collection! We take pride in offering exquisite pieces that combine elegance and craftsmanship. 
+                    Our carefully curated selection features stunning designs that cater to diverse tastes and occasions. 
+                    Each piece is meticulously crafted using high-quality materials to ensure lasting beauty and value. 
+                    Whether you're looking for a statement piece or a subtle accent, our collection has something for everyone. 
+                    We understand that jewelry is more than just an accessory – it's a personal expression of style and sentiment. 
+                    That's why we focus on providing pieces that not only look beautiful but also tell a story. 
+                    Our commitment to quality and customer satisfaction means you can shop with confidence, 
+                    knowing that each item meets our high standards of excellence. Discover the perfect piece to complement your style or find that special gift 
+                    that will be treasured for years to come.                </p>
+            </div>
+           </div>
+            
+          </section>
+
+     </section>
+
+
+</main>
+
+</html>
